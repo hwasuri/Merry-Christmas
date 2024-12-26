@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P";
+  background-image: url(../images/fireplace.gif);
+  background-size: 101%;
+  background-position: center;
+  background-attachment: fixed;
+  line-height: 1.5;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-out forwards;
+  /* background-color: rgb(105, 62, 44); */
+}
+
+.invisible {
+  display: none;
+}
+
+/* ======================================= INTRO =======================================  */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  width: 50vw;
+  height: fit-content;
+  padding: 20px 100px 20px 100px;
+  margin: 50px 10px;
+  background-color: rgb(144, 8, 8);
+  border: 10px solid brown;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+header h1,
+header h2,
+header h3,
+header p {
+  margin: 10px;
+  font-weight: bold;
+  color: rgb(246, 64, 64);
+  text-shadow: 4px 3px 3px rgba(90, 17, 17, 0.5);
+}
+
+header h1,
+header h3 {
+  color: white;
+}
+
+#tree {
+  width: 300px;
+  image-rendering: pixelated;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.8s ease-out forwards;
+}
+
+/* ========= ANIMATION =========*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======================================= MAIN =======================================  */
+.gift {
+  width: 200px;
+  image-rendering: pixelated;
+  filter: drop-shadow(10px 10px 4px rgba(14, 36, 20, 0.5));
+  margin: 0px 20px 100px 20px;
+  transition: transform 1s;
+}
+
+.gift:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+
+#gift1:hover {
+  content: url(../images/gift1.gif);
+}
+
+#gift2:hover {
+  content: url(../images/gift2.gif);
+}
+
+#gifts h1 {
+  margin: 50px 0px;
+  color: rgb(60, 125, 80);
+  text-shadow: 4px 3px 3px rgba(36, 75, 47, 0.5);
+  font-size: 30px;
+}
+
+#gifts {
+  text-align: center;
+  width: 50vw;
+  margin: 10px;
+  background-color: rgb(49, 91, 61);
+  border: 10px solid rgb(32, 66, 42);
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+/* ======================================= PAGE 1 =======================================  */
+#page1 {
+  width: 50vw;
+  color: white;
+  text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.75);
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+#page1 h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+#page1 p,
+#page1 h2 {
+  line-height: 2;
+  margin: 20px;
+  text-indent: 50px;
+}
+
+#btn1 {
+  padding: 5px;
+  color: white;
+  background-color: rgb(112, 22, 22);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  transform: scale(1.2);
+
+  transition: transform 1s
+}
+
+#btn1:hover{
+  transform: scale(1.4);
+  transition: transform 0.5s;
+}
+
+#btn1div {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
